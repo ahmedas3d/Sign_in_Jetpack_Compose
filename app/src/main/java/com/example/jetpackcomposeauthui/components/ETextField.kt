@@ -19,7 +19,7 @@ import com.example.jetpackcomposeauthui.ui.theme.AlegreyaSansFontFamily
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CTextField(
+fun ETextField(
     onValueChange: (String) -> Unit = {},
     hint: String,
     value: String,
@@ -41,6 +41,7 @@ fun CTextField(
         modifier = Modifier
             .fillMaxWidth()
             .padding(bottom = 8.dp),
+        visualTransformation = PasswordVisualTransformation(),
         keyboardOptions = KeyboardOptions.Default.copy(
             keyboardType = keyboardType
         ),

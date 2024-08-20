@@ -36,6 +36,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.jetpackcomposeauthui.components.CButton
 import com.example.jetpackcomposeauthui.components.CTextField
 import com.example.jetpackcomposeauthui.components.DontHaveAccountRow
+import com.example.jetpackcomposeauthui.components.ETextField
 import com.example.jetpackcomposeauthui.ui.theme.AlegreyaFontFamily
 import com.example.jetpackcomposeauthui.ui.theme.AlegreyaSansFontFamily
 
@@ -98,11 +99,11 @@ fun LoginScreen(
                     keyboardType = KeyboardType.Email
                 )
 
-                CTextField(
+                ETextField(
                     hint = "Password",
                     value = password,
                     onValueChange = { password = it },  // Update password state
-                    keyboardType = KeyboardType.Password
+                    keyboardType = KeyboardType.Password,
                 )
 
                 Spacer(modifier = Modifier.height(24.dp))

@@ -33,12 +33,13 @@ import androidx.navigation.compose.rememberNavController
 import com.example.jetpackcomposeauthui.components.CButton
 import com.example.jetpackcomposeauthui.components.CTextField
 import com.example.jetpackcomposeauthui.components.DontHaveAccountRow
+import com.example.jetpackcomposeauthui.components.ETextField
 import com.example.jetpackcomposeauthui.ui.theme.AlegreyaFontFamily
 import com.example.jetpackcomposeauthui.ui.theme.AlegreyaSansFontFamily
 
 @Composable
 fun SignupScreen(
-    navController: NavHostController
+    navController: NavHostController,
 ) {
     val fullName = remember { mutableStateOf("") }
     val email = remember { mutableStateOf("") }
@@ -103,7 +104,7 @@ fun SignupScreen(
                     onValueChange = { email.value = it }
                 )
 
-                CTextField(
+                ETextField(
                     hint = "Password",
                     value = password.value,
                     keyboardType = KeyboardType.Password,
