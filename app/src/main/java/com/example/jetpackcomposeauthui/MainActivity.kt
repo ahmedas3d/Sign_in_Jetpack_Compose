@@ -20,7 +20,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             JetpackComposeAuthUITheme {
-                /// Let just add navigation so users can go from one screen to another
                 NavigationView()
             }
         }
@@ -32,11 +31,11 @@ fun NavigationView() {
 
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = "welcome" ){
+    NavHost(navController = navController, startDestination = "welcome") {
         // also pass navController to each screen so we can use navController in there
-        composable("welcome"){ WelcomeScreen(navController)}
-        composable("login"){ LoginScreen(navController)}
-        composable("signup"){ SignupScreen(navController)}
+        composable("welcome") { WelcomeScreen(navController) }
+        composable("login") { LoginScreen(navController) }
+        composable("signup") { SignupScreen(navController) }
     }
 
 }

@@ -71,14 +71,13 @@ fun WelcomeScreen(
                 onClick = {
                     navController.navigate("login")
                 }
-                )
+            )
 
             DontHaveAccountRow(
                 onSignupTap = {
                     navController.navigate("signup")
                 }
             )
-
 
 
         }

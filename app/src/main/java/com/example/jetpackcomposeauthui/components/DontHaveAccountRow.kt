@@ -18,9 +18,10 @@ fun DontHaveAccountRow(
     onSignupTap: () -> Unit = {},
 ) {
     Row(
-        modifier = Modifier.padding(top=12.dp, bottom = 52.dp)
-    ){
-        Text("Don't have an account? ",
+        modifier = Modifier.padding(top = 12.dp, bottom = 52.dp)
+    ) {
+        Text(
+            "Don't have an account? ",
             style = TextStyle(
                 fontSize = 18.sp,
                 fontFamily = AlegreyaSansFontFamily,
@@ -39,7 +40,5 @@ fun DontHaveAccountRow(
                 onSignupTap()
             }
         )
-
-
     }
 }

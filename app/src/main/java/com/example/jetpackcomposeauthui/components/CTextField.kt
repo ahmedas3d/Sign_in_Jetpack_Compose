@@ -28,7 +28,8 @@ fun CTextField(
         value = value,
         onValueChange = onValueChange,
         placeholder = {
-            Text(text = hint,
+            Text(
+                text = hint,
                 style = TextStyle(
                     fontSize = 18.sp,
                     fontFamily = AlegreyaSansFontFamily,
