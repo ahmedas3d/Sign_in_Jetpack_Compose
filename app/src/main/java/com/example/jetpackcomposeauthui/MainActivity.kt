@@ -3,15 +3,9 @@ package com.example.jetpackcomposeauthui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -41,6 +35,7 @@ fun NavigationView() {
 
     NavHost(navController = navController, startDestination = "welcome") {
         // also pass navController to each screen so we can use navController in there
+        composable("trip") { TripScreen(navController) }
         composable("welcome") { WelcomeScreen(navController) }
         composable("login") { LoginScreen(navController) }
         composable("signup") { SignupScreen(navController) }
